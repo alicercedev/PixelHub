@@ -1,2 +1,2 @@
 # PixelHub
-Básicamente uma desculpa pra fazer um site de torneio.
+Basicamente uma desculpa pra fazer um site de torneio.

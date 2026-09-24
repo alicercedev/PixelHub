@@ -1,0 +1,30 @@
+/* =========================================
+   base.css — comum a TODAS as páginas
+   (carregue sempre antes do auth.css ou dashboard.css)
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: inherit;
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: 'Ethnocentric';
+    src: url('../fonts/Ethnocentric.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    overflow-x: hidden;
+    color: #fff;
+    font-family: 'Inter', Arial, sans-serif;
+}

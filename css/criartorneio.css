@@ -1,0 +1,670 @@
+/* =========================================
+   criartorneio.css
+   Página: Criar Torneio
+   Compatível com base.css
+========================================= */
+
+body {
+    background: #050308;
+}
+
+.dashboard-container {
+    min-height: 100dvh;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: 5rem 1fr;
+    grid-template-areas:
+        "navbar"
+        "main";
+    background:
+        radial-gradient(circle at 50% 0%, rgba(76, 67, 205, 0.14), transparent 40%),
+        #050308;
+}
+
+
+/* ---------- NAVEGAÇÃO DA NAVBAR ---------- */
+
+.navbar {
+    grid-area: navbar;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2.5rem;
+    z-index: 20;
+}
+
+.navbar-links {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.navbar-links a {
+    padding: 0.6rem 0.85rem;
+    border-radius: 10px;
+    color: #aaa7b5;
+    font-size: 0.82rem;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.navbar-links a:hover {
+    color: #fff;
+    background: rgba(126, 91, 255, 0.1);
+    transform: translateY(-1px);
+}
+
+/* Página atual */
+
+.navbar-links a.ativo {
+    color: #fff;
+    background: rgba(126, 91, 255, 0.16);
+    border: 1px solid rgba(126, 91, 255, 0.25);
+}
+
+
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    margin-left: auto;
+}
+
+.btn-sair {
+    padding: 0.55rem 1.1rem;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #ff4d5e, #d92338);
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 700;
+    box-shadow: 0 5px 16px rgba(217, 35, 56, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.btn-sair:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+    box-shadow: 0 8px 22px rgba(217, 35, 56, 0.45);
+}
+
+.btn-sair:active {
+    transform: translateY(0);
+}
+
+.image {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #7e5bff, #4c43cd);
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 800;
+    border: 2px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 20px rgba(76, 67, 205, 0.25);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.image:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 28px rgba(126, 91, 255, 0.4);
+}
+
+.image p {
+    margin: 0;
+}
+
+/* ---------- RESPONSIVO ---------- */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        padding: 0 0.8rem;
+        gap: 0.5rem;
+    }
+
+    .navbar-title {
+        display: none;
+    }
+
+    .navbar-links {
+        position: static;
+        transform: none;
+
+        display: flex;
+        flex: 1;
+        min-width: 0;
+        margin: 0;
+
+        gap: 0.15rem;
+    }
+
+    .navbar-links a {
+        flex: 1;
+        min-width: 0;
+
+        padding: 0.5rem 0.3rem;
+
+        text-align: center;
+        font-size: 0.7rem;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .navbar-actions {
+        flex-shrink: 0;
+        margin-left: 0;
+        gap: 0.4rem;
+    }
+
+    .btn-sair {
+        padding: 0.5rem 0.7rem;
+        font-size: 0.72rem;
+    }
+
+    .image {
+        width: 2.4rem;
+        height: 2.4rem;
+        flex-shrink: 0;
+        font-size: 1rem;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        height: 4rem;
+        padding: 0 0.5rem;
+        gap: 0.25rem;
+    }
+
+    .navbar-links {
+        gap: 0.1rem;
+    }
+
+    .navbar-links a {
+        padding: 0.45rem 0.15rem;
+        font-size: 0;
+
+        border-radius: 8px;
+    }
+
+    .navbar-links a::before {
+        font-size: 0.62rem;
+        font-weight: 700;
+    }
+
+    .navbar-links a:nth-child(1)::before {
+        content: "Jogadores";
+    }
+
+    .navbar-links a:nth-child(2)::before {
+        content: "Torneio";
+    }
+
+    .navbar-links a:nth-child(3)::before {
+        content: "Menu";
+    }
+
+    .navbar-links a:nth-child(4)::before {
+        content: "Histórico";
+    }
+
+    .navbar-actions {
+        gap: 0.3rem;
+    }
+
+    .btn-sair {
+        padding: 0.45rem 0.55rem;
+        font-size: 0.65rem;
+        border-radius: 8px;
+    }
+
+    .image {
+        width: 2.15rem;
+        height: 2.15rem;
+        font-size: 0.9rem;
+    }
+}
+
+
+@media (max-width: 400px) {
+
+    .navbar {
+        padding: 0 0.3rem;
+    }
+
+    .navbar-links a::before {
+        font-size: 0.55rem;
+    }
+
+    .btn-sair {
+        padding: 0.4rem 0.45rem;
+        font-size: 0.6rem;
+    }
+
+    .image {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+/* ---------- MAIN / TÍTULO ---------- */
+
+.main {
+    grid-area: main;
+    width: 100%;
+    max-width: 1500px;
+    min-width: 0;
+    margin: 0 auto;
+    padding: 3rem 2.5rem 4rem;
+}
+
+.section {
+    width: 100%;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 1.5rem;
+}
+
+.section-header h1 {
+    margin-top: 0.35rem;
+    font-family: 'Ethnocentric', sans-serif;
+    color: blueviolet;
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    font-weight: 800;
+    letter-spacing: -0.6px;
+}
+
+.section-header p {
+    margin-top: 0.4rem;
+    color: #8f8b99;
+    font-size: 0.9rem;
+}
+
+.section-tag {
+    display: inline-block;
+    color: #9c8cff;
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+
+/* ---------- AVISOS DE ERRO ---------- */
+
+#areaErro2:has(p),
+#areaErro3:has(p) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    padding: 1rem 1.25rem;
+    border-radius: 16px;
+    background: rgba(217, 35, 56, 0.1);
+    border: 1px solid rgba(255, 77, 94, 0.4);
+}
+
+#areaErro2 p,
+#areaErro3 p {
+    color: #ff9aa5;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+#areaErro2 button,
+#areaErro3 button {
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    font-family: inherit;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+/* os <br> do JS só serviam de espaçamento */
+#menu-principal br,
+#rodada br {
+    display: none;
+}
+
+
+/* ---------- LISTAS (jogadores, rodadas) ---------- */
+
+.listas-jogadores {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    align-items: start;
+}
+
+.listas-jogadores:has(ul) {
+    margin-bottom: 1.25rem;
+}
+
+.lista-coluna {
+    list-style: none;
+    overflow-y: auto;
+    border-radius: 20px;
+    background: linear-gradient(180deg, #111015, #09080c);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.45);
+    scrollbar-width: thin;
+    scrollbar-color: #4c43cd transparent;
+}
+
+.listas-jogadores .lista-coluna {
+    max-height: 24rem;            /* muitos jogadores: a lista rola por dentro */
+}
+
+.lista-coluna li {
+    padding: 0.35rem 0.6rem;
+}
+
+/* respiro no começo e no fim da lista (igual ao espaço entre os itens: 0.35 + 0.35) */
+.lista-coluna li.topo + li {
+    padding-top: 0.7rem;
+}
+
+.lista-coluna li:last-child:not(.topo) {
+    padding-bottom: 0.7rem;
+}
+
+.lista-coluna li.topo {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    padding: 0.9rem 1.1rem;
+    background: #171126;
+    border-bottom: 1px solid rgba(126, 91, 255, 0.2);
+    color: #9c8cff;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+/* o cabeçalho da lista usa <h1> no JS: aqui ele herda o tamanho do .topo */
+.lista-coluna li.topo h1 {
+    font-size: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+}
+
+.lista-coluna.desativado li.topo {
+    color: #8f8b99;
+}
+
+/* botão com o nome do jogador */
+.lista-coluna li > button {
+    width: 100%;
+    padding: 0.65rem 0.9rem;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(126, 91, 255, 0.25);
+    border-radius: 10px;
+    font: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.lista-coluna li:not(.li-gerenciar) > button:hover:not(:disabled) {
+    background: rgba(126, 91, 255, 0.14);
+    border-color: #7e5bff;
+}
+
+.lista-coluna li > button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+/* vencedor da rodada */
+.lista-coluna li > .jogador-selecionado:disabled {
+    opacity: 1;
+    background: rgba(46, 204, 113, 0.16);
+    border-color: rgba(46, 204, 113, 0.6);
+    color: #b8f5cf;
+}
+
+/* jogadores já selecionados (com o botão Remover) */
+.lista-coluna .li-gerenciar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.6rem 1.1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    font-size: 0.92rem;
+    font-weight: 600;
+}
+
+.lista-coluna .li-gerenciar:last-child {
+    border-bottom: none;
+}
+
+.lista-coluna .li-gerenciar div {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+
+/* ---------- BOTÕES ---------- */
+
+#confirmarOpcoes button,
+#novoTorneio,
+.botao-cancelar,
+.lista-coluna .li-gerenciar > button {
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+/* principal: Confirmar e Próximo */
+#confirmarOpcoes button[type="submit"],
+#novoTorneio {
+    padding: 0.85rem 1.4rem;
+    background: linear-gradient(135deg, #7e5bff, #4c43cd);
+    border: none;
+    font-size: 0.9rem;
+    box-shadow: 0 7px 20px rgba(76, 67, 205, 0.3);
+}
+
+/* secundário: Cancelar */
+#confirmarOpcoes #cancelarform {
+    padding: 0.85rem 1.4rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(126, 91, 255, 0.35);
+    font-size: 0.9rem;
+}
+
+/* perigo: Cancelar torneio e Remover */
+.botao-cancelar,
+.lista-coluna .li-gerenciar > button {
+    background: rgba(217, 35, 56, 0.12);
+    border: 1px solid rgba(255, 77, 94, 0.5);
+    color: #ff9aa5;
+}
+
+.botao-cancelar {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.85rem;
+}
+
+.lista-coluna .li-gerenciar > button {
+    flex-shrink: 0;
+    width: auto;
+    text-align: center;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    font-size: 0.8rem;
+}
+
+#confirmarOpcoes button:hover:not(:disabled),
+#novoTorneio:hover:not(:disabled),
+.botao-cancelar:hover:not(:disabled),
+.lista-coluna .li-gerenciar > button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    filter: brightness(1.15);
+}
+
+#confirmarOpcoes button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+
+/* ---------- FORMULÁRIO DO TORNEIO ---------- */
+
+#confirmarOpcoes {
+    padding: 1.8rem 2rem;
+    border-radius: 24px;
+    background: linear-gradient(135deg, #171126, #0b0810);
+    border: 1px solid rgba(126, 91, 255, 0.25);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+}
+
+/* o JS escreve <p><h3>..</h3></p>: o navegador deixa <p> vazios sobrando */
+#confirmarOpcoes p:empty {
+    display: none;
+}
+
+#confirmarOpcoes h3 {
+    margin-top: 1.1rem;
+    color: #c9c5d6;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+#confirmarOpcoes h3:first-of-type {
+    margin-top: 0;
+}
+
+#confirmarOpcoes input {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    height: 2.9rem;
+    margin-top: 0.5rem;
+    padding: 0 1rem;
+    border-radius: 12px;
+    border: 1px solid rgba(126, 91, 255, 0.25);
+    background: rgba(255, 255, 255, 0.04);
+    color: #fff;
+    font: inherit;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#confirmarOpcoes input::placeholder {
+    color: #8f8b99;
+}
+
+#confirmarOpcoes input:focus {
+    border-color: #7e5bff;
+    box-shadow: 0 0 0 3px rgba(126, 91, 255, 0.2);
+}
+
+#confirmarOpcoes input:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#confirmarOpcoes button {
+    margin: 1.5rem 0.6rem 0 0;
+}
+
+
+/* ---------- TORNEIO EM ANDAMENTO ---------- */
+
+#titulo {
+    margin-top: 2.5rem;
+    margin-bottom: 1.25rem;
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    font-weight: 800;
+    letter-spacing: -0.6px;
+    overflow-wrap: anywhere;
+}
+
+#titulo:empty {
+    display: none;
+}
+
+#rodada {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+    gap: 1rem;
+    align-items: start;
+}
+
+/* botões e o título do vencedor ocupam a linha toda */
+#rodada > button,
+#rodada > h2 {
+    grid-column: 1 / -1;
+}
+
+#rodada > button {
+    justify-self: start;
+}
+
+.fonte,
+#rodada > h2 {
+    font-family: 'Ethnocentric', sans-serif;
+    color: blueviolet;
+}
+
+#rodada > h2 {
+    margin-top: 1rem;
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    font-weight: 800;
+    letter-spacing: -0.6px;
+    overflow-wrap: anywhere;
+}
+
+
+/* ---------- RESPONSIVO ---------- */
+
+@media (max-width: 800px) {
+    .navbar {
+        padding: 0 1rem;
+    }
+
+    .main {
+        padding: 2rem 1rem 3rem;
+    }
+
+    .listas-jogadores {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    #confirmarOpcoes {
+        padding: 1.4rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar-title {
+        display: none;
+    }
+}

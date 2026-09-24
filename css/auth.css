@@ -1,0 +1,238 @@
+/* =========================================
+   auth.css — páginas de LOGIN e CADASTRO
+========================================= */
+
+body {
+    background: linear-gradient(0deg, #10002b, #000000);
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;                    /* folga mínima entre a nav e o card */
+    padding-bottom: 2rem;
+}
+
+
+/* ---------- TOPO (barra de cima) ---------- */
+
+.topo {
+    width: 100%;
+    height: 56px;
+    padding: 0 24px;
+    background-color: #240046;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.topo .logos-perfil {
+    width: 32px;
+    height: 32px;
+}
+
+
+/* ---------- CAIXA CENTRAL ---------- */
+
+.quadrado {
+    margin: auto;
+    width: 360px;
+    max-width: 92%;               /* nunca passa da tela */
+    aspect-ratio: 1 / 1;
+    background: #000000;
+    border: 2px solid #4C43CD;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    padding: 24px;
+        filter: drop-shadow(0 0 15px rgba(126, 91, 255, 0.35));
+}
+
+.login {
+    width: 420px;
+}
+
+.ph {
+    width: 400px;
+}
+
+h1 {
+    font-family: 'Ethnocentric', sans-serif;
+    color: blueviolet;
+    font-size: 40px;
+}
+
+h4 {
+    color: #e0aaff;
+}
+
+
+/* ---------- INPUTS ---------- */
+
+.entrar {
+    width: 300px;
+    max-width: 100%;              /* encolhe em telas pequenas */
+    height: 50px;
+    padding: 0 16px;
+    font-size: 16px;              /* 16px evita o zoom automático do iPhone */
+    background-color: #4C43CD;
+    border-radius: 24px;
+    border: none;
+    margin-bottom: 16px;
+    outline: none;
+    color: #e0aaff;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.entrar::placeholder {
+    color: #e0aaff;
+}
+
+/* campo de senha + olho */
+.campo-senha {
+    position: relative;
+    width: 300px;
+    max-width: 100%;
+    margin: 0 auto 16px;
+}
+
+.campo-senha .entrar {
+    display: block;
+    width: 100%;
+    margin-bottom: 0;
+    padding-right: 48px;          /* o texto não fica embaixo do olho */
+}
+
+.ativar-senha {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+
+/* ---------- BOTÕES ---------- */
+
+button {
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 100px;
+    background-color: #4C43CD;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    margin: 8px;
+}
+
+button:hover {
+    filter: brightness(1.25);
+    transform: scale(1.03);
+}
+
+.button-cadastro {
+    background-color: #000000;
+    border: 2px solid #4C43CD;
+}
+
+/* botões lado a lado (VOLTAR + CADASTRAR-SE) */
+.botoes {
+    display: flex;
+    flex-wrap: wrap;              /* quebra linha se a tela for muito estreita */
+    justify-content: center;
+    gap: 8px;
+}
+
+.botoes button {
+    margin: 0;
+    padding: 15px 20px;
+}
+
+
+/* ---------- LOGOS (google, discord...) ---------- */
+
+.logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.logos-perfil {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.logos-perfil:hover {
+    filter: brightness(1.25);
+}
+
+
+/* ---------- RESPONSIVO ---------- */
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    .quadrado {
+        aspect-ratio: auto;       /* altura acompanha o conteúdo */
+    }
+
+    .ph,
+    .login {
+        max-width: 100%;          /* imagens não estouram o card */
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 26px;
+    }
+
+    body {
+        gap: 1.25rem;
+        padding-bottom: 1.25rem;
+    }
+
+    .topo {
+        height: 48px;
+        padding: 0 16px;
+    }
+
+    .topo .logos-perfil {
+        width: 28px;
+        height: 28px;
+    }
+
+    .quadrado {
+        padding: 20px 16px;
+        gap: 14px;
+    }
+
+    .logos {
+        gap: 10px;
+    }
+
+    .logos .logos-perfil {
+        width: 32px;
+        height: 32px;
+    }
+
+    button {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    .botoes button {
+        padding: 12px 18px;
+    }
+}

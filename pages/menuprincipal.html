@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../img/perfil.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=M+PLUS+U:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+    <title>Menu Principal - Pixel Hub</title>
+
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/menuprincipal.css">
+</head>
+
+<body data-page="menuprincipal">
+
+<div class="dashboard-container">
+
+<nav class="navbar">
+
+
+    <div class="navbar-links">
+        <a href="gerenciarjogadores.html">Gerenciar Jogadores</a>
+        <a href="criartorneio.html">Criar Torneio</a>
+        <a href="menuprincipal.html">Menu Principal</a>
+        <a href="historicotorneios.html">Histórico de Torneios</a>
+    </div>
+
+    <div class="navbar-actions">
+
+        <a href="../index.html" class="btn-sair">Sair</a>
+        <div class="image">
+            <p id="letraUserMe">T</p>
+        </div>
+
+    </div>
+
+</nav>
+
+
+    <main class="main">
+
+            <div class="main-logo">
+        <img src="../img/logo2.png" alt="Pixel Hub">
+            </div>
+
+
+        <section class="section destaque">
+
+            <div class="section-header">
+                <div>
+                    <span class="section-tag">EM DESTAQUE</span>
+                    <h1>Últimos torneios</h1>
+                </div>
+            </div>
+
+            <div class="backgroundcarrossel">
+                <div class="torneiocont">
+                    <div class="torneios" id="torneio">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        </section>
+        <section class="criar-torneio">
+
+            <div class="criar-content">
+                <div>
+                    <span class="section-tag">GERENCIE SEUS JOGADORES</span>
+                    <h2>Deseja cadastrar alguém novo?</h2>
+                    <p>
+                        Cadastre e altere seus jogadores.
+                    </p>
+                </div>
+
+                <a href="gerenciarjogadores.html" class="btn-criar">
+                    Gerenciar Jogadores
+                </a>
+            </div>
+        </section>
+
+
+                <section class="criar-torneio">
+
+            <div class="criar-content">
+                <div>
+                    <span class="section-tag">ORGANIZE SUA COMPETIÇÃO</span>
+                    <h2>Quer criar seu próximo torneio?</h2>
+                    <p>
+                        Crie uma competição entre seus jogadores.
+                    </p>
+                </div>
+
+                 <a href="criartorneio.html" class="btn-criar">
+                    <span>＋</span>
+                    Criar torneio
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+</div>
+
+ <div id="menu-principal">
+        <div id="areaErro2"> </div>
+      <br><br>
+      <div class="listas-jogadores">
+        <div id="lista-selecionar"></div>
+        <div id="lista-selecionado"></div>
+      </div>
+      <div id="opcoes"></div>
+    </div>
+
+
+    <h2 id="titulo"></h2>
+      <div id="areaErro3"> </div>
+    <br>
+    <div id="rodada"class="rodadaClass"></div>
+
+
+ <script src="../js/script.js"></script>
+
+</body>
+</html>

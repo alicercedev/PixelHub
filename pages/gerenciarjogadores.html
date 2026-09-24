@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" href="../img/perfil.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <title>Gerenciar Jogadores - Pixel Hub</title>
+
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/gerenciarjogadores.css">
+</head>
+
+<body data-page="gerenciarjogadores">
+
+<div class="dashboard-container">
+
+<nav class="navbar">
+
+
+    <div class="navbar-links">
+        <a href="gerenciarjogadores.html">Gerenciar Jogadores</a>
+        <a href="criartorneio.html">Criar Torneio</a>
+        <a href="menuprincipal.html">Menu Principal</a>
+        <a href="historicotorneios.html">Histórico de Torneios</a>
+    </div>
+
+    <div class="navbar-actions">
+
+        <a href="../index.html" class="btn-sair">Sair</a>
+        <div class="image">
+            <p id = "letraUserGe">T</p>
+        </div>
+
+    </div>
+
+</nav>
+
+    <main class="main">
+
+
+        <section class="section gerenciar-section">
+
+            <div class="section-header">
+                <div>
+                    <span class="section-tag">ADMINISTRAÇÃO</span>
+                    <h1>Gerenciar Jogadores</h1>
+                    <p>Cadastre, pesquise, altere e acompanhe o desempenho dos jogadores.</p>
+                </div>
+            </div>
+
+                        <section class="painel estatisticas-painel">
+
+                <div class="painel-header">
+                    <div>
+                        <span class="section-tag">VISÃO GERAL</span>
+                        <h2>Resumo dos jogadores</h2>
+                    </div>
+                </div>
+
+                <div class="estatisticas-grid">
+
+                    <ul id="listaQuant" class="lista-estatistica">
+                        <li class="topo">Quantidade de jogadores</li>
+                    </ul>
+
+                    <ul id="listaMais" class="lista-estatistica">
+                        <li class="topo">Jogador com mais vitórias</li>
+                    </ul>
+
+                    <ul id="listaMenos" class="lista-estatistica">
+                        <li class="topo">Jogador com menos vitórias</li>
+                    </ul>
+
+                    <ul id="listaMedia" class="lista-estatistica">
+                        <li class="topo">Média de vitórias por jogador</li>
+                    </ul>
+
+                    <ul id="listaVenceu" class="lista-estatistica">
+                        <li class="topo">Jogadores vencedores</li>
+                    </ul>
+
+                   <ul id="listaNVenceu" class="lista-estatistica">
+                        <li class="topo">Jogadores não vencedores</li>
+                    </ul>
+
+                </div>
+
+            </section>
+
+
+            <div id="areaErro" class="area-erro"></div>
+
+            <div class="painel-superior">
+
+                <section class="painel cadastro-painel">
+                    <div class="painel-header">
+                        <div>
+                            <span class="section-tag">NOVO JOGADOR</span>
+                            <h2>Cadastrar jogador</h2>
+                        </div>
+                    </div>
+
+                    <form id="formulario" class="form-jogador">
+                        <label for="nomeJogador">Nome do jogador</label>
+
+                        <div class="campo-form">
+                            <input
+                                type="text"
+                                id="nomeJogador"
+                                placeholder="Digite o nome do jogador"
+                                maxlength="40"
+                                required
+                            >
+
+                            <button type="submit" class="btn-principal">
+                                Cadastrar
+                            </button>
+                        </div>
+                    </form>
+                </section>
+
+                <section class="painel pesquisa-painel">
+                    <div class="painel-header">
+                        <div>
+                            <span class="section-tag">FILTROS</span>
+                            <h2>Pesquisar jogadores</h2>
+                        </div>
+                    </div>
+
+                    <form id="formPesJog" class="form-pesquisa">
+                        <div class="campo-pesquisa">
+                            <label for="inPesJog">Nome</label>
+                            <input
+                                type="text"
+                                id="inPesJog"
+                                placeholder="Ex.: Jogador67"
+                            >
+                        </div>
+
+                        <div class="campo-pesquisa campo-vitorias">
+                            <label for="inFilJog">Vitórias</label>
+                            <input
+                                type="number"
+                                id="inFilJog"
+                                min="0"
+                                placeholder="0"
+                            >
+                        </div>
+                    </form>
+                </section>
+
+            </div>
+
+
+
+            <section class="painel jogadores-painel">
+
+                <div class="painel-header painel-header-lista">
+                    <div>
+                        <span class="section-tag">CADASTRO ATUAL</span>
+                        <h2>Jogadores cadastrados</h2>
+                        <p>Visualize e gerencie os jogadores registrados no sistema.</p>
+                    </div>
+                </div>
+
+                <div id="editarJogador" class="area-edicao"></div>
+
+                <div class="tabela-wrapper">
+                    <table id="tabelaJogadores">
+                        <thead>
+                            <tr>
+                                <th>Jogador</th>
+                                <th>Vitórias</th>
+                                <th>Opções</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="lista"></tbody>
+                    </table>
+                </div>
+
+                <div id="areaErro2" class="area-erro"></div>
+
+            </section>
+
+            <section class="painel historico-reserva" aria-hidden="true">
+                <div id="espaco-historico"></div>
+            </section>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+ <script src="../js/script.js"></script>
+</body>
+</html>

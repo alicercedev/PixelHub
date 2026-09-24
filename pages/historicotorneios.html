@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../img/perfil.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <title>Histórico de Torneios - Pixel Hub</title>
+
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/historicotorneios.css">
+</head>
+
+<body data-page="historicotorneios">
+
+    
+
+<div class="dashboard-container">
+
+<nav class="navbar">
+
+
+    <div class="navbar-links">
+        <a href="gerenciarjogadores.html">Gerenciar Jogadores</a>
+        <a href="criartorneio.html">Criar Torneio</a>
+        <a href="menuprincipal.html">Menu Principal</a>
+        <a href="historicotorneios.html">Histórico de Torneios</a>
+    </div>
+
+    <div class="navbar-actions">
+
+        <a href="../index.html" class="btn-sair">Sair</a>
+        <div class="image">
+            <p id="letraUserHi">T</p>
+        </div>
+
+    </div>
+
+</nav>
+
+
+    <main class="main">
+
+        <section class="section">
+
+            <div class="section-header">
+                <div>
+                    <span class="section-tag">TODOS OS TORNEIOS</span>
+                    <h1>Histórico de torneios</h1>
+                </div>
+            </div>
+
+            <div class="torneios" id="torneio">
+
+                <!-- ===== CARDS DE EXEMPLO: apague daqui ...
+
+                <article class="torneiocard">
+                    <img class="fototorneio" src="../img/torneio.png" alt="">
+                    <div class="torneio-conteudo">
+                        <div class="torneio-topo">
+                            <h3 class="nome" title="Copa Pixel">Copa Pixel</h3>
+                            <span class="torneio-rodadas">3 rodadas</span>
+                        </div>
+                        <ol class="torneio-classificacao">
+                        <li><span class="pos">1º</span><span class="jogador">jogador1</span></li>
+                        <li><span class="pos">2º</span><span class="jogador">jogador2</span></li>
+                        <li><span class="pos">3º</span><span class="jogador">jogador3</span></li>
+                        <li><span class="pos">4º</span><span class="jogador">jogador4</span></li>
+                        <li><span class="pos">5º</span><span class="jogador">jogador5</span></li>
+                        <li><span class="pos">6º</span><span class="jogador">jogador6</span></li>
+                        <li><span class="pos">7º</span><span class="jogador">jogador7</span></li>
+                        <li><span class="pos">8º</span><span class="jogador">jogador8</span></li>
+                        </ol>
+                    </div>
+                </article>
+
+                <article class="torneiocard">
+                    <img class="fototorneio" src="../img/torneio.png" alt="">
+                    <div class="torneio-conteudo">
+                        <div class="torneio-topo">
+                            <h3 class="nome" title="Torneio Legal">Torneio Legal</h3>
+                            <span class="torneio-rodadas">2 rodadas</span>
+                        </div>
+                        <ol class="torneio-classificacao">
+                        <li><span class="pos">1º</span><span class="jogador">jogador1</span></li>
+                        <li><span class="pos">2º</span><span class="jogador">jogador2</span></li>
+                        <li><span class="pos">3º</span><span class="jogador">jogador3</span></li>
+                        <li><span class="pos">4º</span><span class="jogador">jogador4</span></li>
+                        </ol>
+                    </div>
+                </article>
+
+                <article class="torneiocard">
+                    <img class="fototorneio" src="../img/torneio.png" alt="">
+                    <div class="torneio-conteudo">
+                        <div class="torneio-topo">
+                            <h3 class="nome" title="Mario Kart World">Mario Kart World</h3>
+                            <span class="torneio-rodadas">4 rodadas</span>
+                        </div>
+                        <ol class="torneio-classificacao">
+                        <li><span class="pos">1º</span><span class="jogador">jogador1</span></li>
+                        <li><span class="pos">2º</span><span class="jogador">jogador2</span></li>
+                        <li><span class="pos">3º</span><span class="jogador">jogador3</span></li>
+                        <li><span class="pos">4º</span><span class="jogador">jogador4</span></li>
+                        <li><span class="pos">5º</span><span class="jogador">jogador5</span></li>
+                        <li><span class="pos">6º</span><span class="jogador">jogador6</span></li>
+                        </ol>
+                    </div>
+                </article>
+
+                <article class="torneiocard">
+                    <img class="fototorneio" src="../img/torneio.png" alt="">
+                    <div class="torneio-conteudo">
+                        <div class="torneio-topo">
+                            <h3 class="nome" title="Liga dos Amigos">Liga dos Amigos</h3>
+                            <span class="torneio-rodadas">1 rodada</span>
+                        </div>
+                        <ol class="torneio-classificacao">
+                        <li><span class="pos">1º</span><span class="jogador">jogador1</span></li>
+                        <li><span class="pos">2º</span><span class="jogador">jogador2</span></li>
+                        <li><span class="pos">3º</span><span class="jogador">jogador3</span></li>
+                        </ol>
+                    </div>
+                </article>
+
+                <article class="torneiocard">
+                    <img class="fototorneio" src="../img/torneio.png" alt="">
+                    <div class="torneio-conteudo">
+                        <div class="torneio-topo">
+                            <h3 class="nome" title="Desafio Relâmpago">Desafio Relâmpago</h3>
+                            <span class="torneio-rodadas">2 rodadas</span>
+                        </div>
+                        <ol class="torneio-classificacao">
+                        <li><span class="pos">1º</span><span class="jogador">jogador1</span></li>
+                        <li><span class="pos">2º</span><span class="jogador">jogador2</span></li>
+                        <li><span class="pos">3º</span><span class="jogador">jogador3</span></li>
+                        <li><span class="pos">4º</span><span class="jogador">jogador4</span></li>
+                        <li><span class="pos">5º</span><span class="jogador">jogador5</span></li>
+                        </ol>
+                    </div>
+                </article>
+
+                <article class="torneiocard">
+                    <img class="fototorneio" src="../img/torneio.png" alt="">
+                    <div class="torneio-conteudo">
+                        <div class="torneio-topo">
+                            <h3 class="nome" title="Noite de Sábado">Noite de Sábado</h3>
+                            <span class="torneio-rodadas">3 rodadas</span>
+                        </div>
+                        <ol class="torneio-classificacao">
+                        <li><span class="pos">1º</span><span class="jogador">jogador1</span></li>
+                        <li><span class="pos">2º</span><span class="jogador">jogador2</span></li>
+                        <li><span class="pos">3º</span><span class="jogador">jogador3</span></li>
+                        <li><span class="pos">4º</span><span class="jogador">jogador4</span></li>
+                        <li><span class="pos">5º</span><span class="jogador">jogador5</span></li>
+                        <li><span class="pos">6º</span><span class="jogador">jogador6</span></li>
+                        <li><span class="pos">7º</span><span class="jogador">jogador7</span></li>
+                        </ol>
+                    </div>
+                </article>
+
+                ... até aqui ===== -->
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+ <script src="../js/script.js"></script>
+
+</body>
+</html>

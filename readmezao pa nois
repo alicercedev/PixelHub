@@ -1,0 +1,61 @@
+# 🎮 Pixel Hub — Sistema de Gerenciamento de Jogadores e Torneios
+
+**📅 Data de produção:** Setembro de 2026
+
+Projeto acadêmico que apresenta um sistema web para **cadastro de jogadores e organização de torneios**, com login de usuário, gerenciamento completo de participantes e histórico de competições.
+
+---
+
+## 💻 Sobre o Projeto
+
+O **Pixel Hub** foi criado com foco em **organização de dados e experiência de uso simples**, permitindo que o usuário cadastre jogadores, monte torneios e acompanhe o desempenho de cada um ao longo do tempo.
+
+O site inclui:
+- Sistema de login e cadastro de usuário
+- Cadastro, pesquisa e edição de jogadores
+- Criação de torneios com seleção de participantes e acompanhamento de rodadas
+- Histórico com os torneios já finalizados
+- Painel com estatísticas gerais (quantidade de jogadores, vitórias, médias, etc.)
+- **Responsividade completa** com uso de *media queries* para celulares
+
+---
+
+## 🧭 Funcionalidades
+
+- **Login e Cadastro:** criação de conta com validação de nome, e-mail e senha, e login com verificação de usuário e senha.
+- **Gerenciar Jogadores:** cadastro de novos jogadores, pesquisa por nome e por número de vitórias, edição e remoção, além de um painel com estatísticas (quantidade de jogadores, jogador com mais/menos vitórias, média de vitórias, vencedores e não vencedores).
+- **Criar Torneio:** seleção dos jogadores participantes, montagem das rodadas e definição automática do vencedor a cada rodada, até chegar ao campeão do torneio.
+- **Histórico de Torneios:** lista todos os torneios já concluídos, com nome, número de rodadas e classificação final dos jogadores.
+- **Menu Principal:** ponto de entrada do sistema, com destaque para os últimos torneios realizados.
+
+---
+
+## 🗄️ Armazenamento de Dados
+
+Atualmente, todos os dados do sistema (usuários, jogadores, torneios e histórico) são salvos através do **localStorage do navegador**, sem a necessidade de um banco de dados ou servidor externo. Isso permite testar o sistema completo apenas abrindo o site, sem nenhuma configuração adicional.
+
+O projeto foi estruturado de forma que essa camada de armazenamento possa futuramente ser substituída por uma **hospedagem em servidor com banco de dados**, mantendo a mesma lógica de funcionamento.
+
+---
+
+## 🧑‍💻 Tecnologias Utilizadas
+
+| Tecnologia | Função |
+|-----------|--------|
+| **HTML5** | Estruturação das páginas |
+| **CSS3** | Estilizações, responsividade e efeitos visuais |
+| **JavaScript** | Lógica do sistema, validações e manipulação da interface |
+| **localStorage** | Armazenamento local dos dados (usuários, jogadores e torneios) |
+
+---
+
+## 👥 Integrantes do Projeto
+
+- **[@BenicyoDEV](https://github.com/BenicyoDEV)**
+- **[@arthurleon44](https://github.com/arthurleon44)**
+- **[@alicercedev]((https://github.com/alicercedev))**
+- **[@gabrielmaximianomax-svg]((https://github.com/gabrielmaximianomax-svg))**
+
+---
+
+**🏫 Instituição:** ETEC de Poá — Curso de Desenvolvimento de Sistemas, 2º ano

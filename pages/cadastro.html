@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../img/perfil.png">
+    <title>Cadastro - Pixel Hub</title>
+
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/auth.css">
+</head>
+<body data-page="cadastro">
+
+<header class="topo">
+  <img src="../img/user.png" class="logos-perfil">
+</header>
+
+<div class="quadrado">
+     <img src="../img/logo2.png" class="ph">
+
+    
+<form onsubmit="return validarCadastro(event)">
+  <input class="entrar" type="text" placeholder="Nome de usuário" size="25" required id="nomeUsuario"> <br>
+  <input class="entrar" type="email" placeholder="Digite seu e-mail" size="25" required id="emailUsuario"> <br>
+
+<div class="campo-senha">
+  <input class="entrar" type="password" placeholder="Crie sua senha" size="25" maxlength="10" id="senhaUsuario" required>
+  <img src="../img/visualizar.png" class="ativar-senha" onclick="mostrarSenha()">
+</div>
+<p id="areaErro" class="erro-form" role="alert"></p>
+<br>
+ <div class="botoes">
+  <button type="button" class="button-cadastro" onclick="window.location.href='../index.html'">VOLTAR</button>
+  <button type="submit">CADASTRAR-SE</button>
+</div>
+
+</form>
+    
+</div>
+
+ <script src="../js/script.js"></script>
+</body>
+</html>
